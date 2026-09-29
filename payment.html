@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Smart Rail | Payment</title>
+</head>
+<body data-page="payment">
+  <main class="payment-page">
+    <section class="bill-card">
+      <dl class="bill" id="bill"></dl>
+
+      <div class="bill-bottom">
+        <dl class="bill total"><dt>Total:</dt><dd id="billTotal"></dd></dl>
+
+        <p class="pm-title" id="pmLabel">Select payment method</p>
+        <!-- To show logos, put an <img src="images/phonepe.png" alt="PhonePe"> inside each button -->
+        <div class="pm-grid" role="radiogroup" aria-labelledby="pmLabel">
+          <button type="button" class="pm" role="radio" aria-checked="false" data-method="PhonePe">PhonePe</button>
+          <button type="button" class="pm" role="radio" aria-checked="false" data-method="Google Pay">Google Pay</button>
+          <button type="button" class="pm" role="radio" aria-checked="false" data-method="BharatPe">BharatPe</button>
+          <button type="button" class="pm" role="radio" aria-checked="false" data-method="BHIM">BHIM</button>
+          <button type="button" class="pm pm-wide" role="radio" aria-checked="false" data-method="Razorpay">Razorpay</button>
+        </div>
+
+        <button type="button" class="btn pay-now" id="payNow" disabled>Select a payment method</button>
+      </div>
+    </section>
+    <a href="confirm.html" class="link-back">Back to booking summary</a>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

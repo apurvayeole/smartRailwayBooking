@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Smart Rail | Search trains</title>
+</head>
+<body data-page="home">
+  <!-- Navbar: stays fixed at the top while scrolling -->
+  <header class="navbar-wrap">
+    <nav class="navbar" aria-label="Main">
+      <div class="nav-links">
+        <a href="index.html" class="btn nav-btn" data-nav="home">HOME</a>
+        <button type="button" class="btn nav-btn" data-action="food">FOOD</button>
+        <a href="trains.html" class="btn nav-btn" data-nav="train">TRAIN</a>
+        <button type="button" class="btn nav-btn" data-action="loyalty">LOYALTY</button>
+        <button type="button" class="btn nav-btn" data-action="contact">CONTACT</button>
+      </div>
+      <div class="nav-auth" id="navAuth">
+        <button type="button" class="btn nav-btn" data-action="login">LOGIN</button>
+        <button type="button" class="btn nav-btn" data-action="signup">SIGNUP</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="search-layout">
+    <!-- Search form -->
+    <form class="search-panel" id="searchForm" novalidate>
+      <div class="field-box">
+        <label for="from">FROM</label>
+        <div class="select-wrap"><select id="from"></select></div>
+      </div>
+      <div class="field-box">
+        <label for="to">TO</label>
+        <div class="select-wrap"><select id="to"></select></div>
+      </div>
+      <div class="field-box">
+        <label for="quota">QUOTA</label>
+        <div class="select-wrap"><select id="quota"></select></div>
+      </div>
+      <div class="field-box concession-box">
+        <label for="concession">CONCESSION</label>
+        <div class="select-wrap compact"><select id="concession"></select></div>
+      </div>
+
+      <div class="search-footer">
+        <div class="date-field">
+          <label for="date">Journey date</label>
+          <input type="date" id="date">
+        </div>
+        <button type="submit" class="btn btn-search">SEARCH TRAINS</button>
+      </div>
+      <p class="form-error" id="searchError" role="alert"></p>
+    </form>
+
+    <!-- PNR status -->
+    <aside class="side-panel" aria-label="PNR status">
+      <div class="pnr-head">
+        <button type="button" class="pnr-btn" id="checkPnr">CHECK PNR</button>
+      </div>
+      <div class="pnr-box">
+        <label for="pnrInput">PNR number</label>
+        <input id="pnrInput" inputmode="numeric" maxlength="10" placeholder="10-digit PNR" autocomplete="off">
+        <div class="pnr-result" id="pnrResult" aria-live="polite"></div>
+      </div>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

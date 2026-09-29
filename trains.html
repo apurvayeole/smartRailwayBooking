@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Smart Rail | Available trains</title>
+</head>
+<body data-page="trains">
+  <!-- Navbar: stays fixed at the top while scrolling -->
+  <header class="navbar-wrap">
+    <nav class="navbar" aria-label="Main">
+      <div class="nav-links">
+        <a href="index.html" class="btn nav-btn" data-nav="home">HOME</a>
+        <button type="button" class="btn nav-btn" data-action="food">FOOD</button>
+        <a href="trains.html" class="btn nav-btn" data-nav="train">TRAIN</a>
+        <button type="button" class="btn nav-btn" data-action="loyalty">LOYALTY</button>
+        <button type="button" class="btn nav-btn" data-action="contact">CONTACT</button>
+      </div>
+      <div class="nav-auth" id="navAuth">
+        <button type="button" class="btn nav-btn" data-action="login">LOGIN</button>
+        <button type="button" class="btn nav-btn" data-action="signup">SIGNUP</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="trains-page">
+    <div class="results-bar">
+      <p id="resultsText"></p>
+      <a href="index.html" class="btn">MODIFY SEARCH</a>
+    </div>
+    <!-- Train cards are created by script.js from the TRAINS list -->
+    <section class="train-list" id="trainList" aria-label="Available trains"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

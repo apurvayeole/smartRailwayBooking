@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Smart Rail | Choose class and passengers</title>
+</head>
+<body data-page="booking">
+  <!-- Navbar: stays fixed at the top while scrolling -->
+  <header class="navbar-wrap">
+    <nav class="navbar" aria-label="Main">
+      <div class="nav-links">
+        <a href="index.html" class="btn nav-btn" data-nav="home">HOME</a>
+        <button type="button" class="btn nav-btn" data-action="food">FOOD</button>
+        <a href="trains.html" class="btn nav-btn" data-nav="train">TRAIN</a>
+        <button type="button" class="btn nav-btn" data-action="loyalty">LOYALTY</button>
+        <button type="button" class="btn nav-btn" data-action="contact">CONTACT</button>
+      </div>
+      <div class="nav-auth" id="navAuth">
+        <button type="button" class="btn nav-btn" data-action="login">LOGIN</button>
+        <button type="button" class="btn nav-btn" data-action="signup">SIGNUP</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="booking-page">
+    <p class="trip-line" id="tripLine"></p>
+
+    <!-- Class cards (1A, 2A, 3A, SL) are created by script.js -->
+    <section class="class-grid" id="classGrid" aria-label="Choose a class"></section>
+
+    <section class="seat-bar">
+      <h2>Select number of seats you want to book</h2>
+      <div class="counter">
+        <button type="button" id="seatMinus" aria-label="Remove a seat">-</button>
+        <output id="seatCount" aria-live="polite">0</output>
+        <button type="button" id="seatPlus" aria-label="Add a seat">+</button>
+      </div>
+    </section>
+
+    <section class="passenger-box">
+      <h2>Passenger Details</h2>
+      <div id="passengerList"></div>
+    </section>
+
+    <div class="insurance-box">
+      <input type="checkbox" id="insurance">
+      <label for="insurance" class="ins-title">Add Insurance</label>
+      <button type="button" class="ins-info" id="insInfo">Click to know extra fare</button>
+      <span class="ins-price">800 Rs</span>
+    </div>
+
+    <div class="book-row">
+      <p class="running-total" id="runningTotal" aria-live="polite"></p>
+      <button type="button" class="btn btn-book-now" id="bookNow">BOOK NOW</button>
+    </div>
+    <p class="form-error" id="bookError" role="alert"></p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

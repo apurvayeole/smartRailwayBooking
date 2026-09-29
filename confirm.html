@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Smart Rail | Confirm booking</title>
+</head>
+<body data-page="confirm">
+  <main class="confirm-page">
+    <section class="confirm-card">
+      <h1>Confirm Booking</h1>
+
+      <div class="journey">
+        <div class="train-id"><span id="cTrainName"></span><span id="cTrainNo"></span></div>
+        <div><span id="cFrom"></span><span id="cFromSt"></span><span id="cDep"></span></div>
+        <div class="journey-arrow" aria-hidden="true"></div>
+        <div><span id="cTo"></span><span id="cToSt"></span><span id="cArr"></span></div>
+      </div>
+
+      <dl class="summary">
+        <dt>Journey Date:</dt><dd id="cDate"></dd>
+        <dt>Number of Passengers:</dt><dd id="cCount"></dd>
+        <dt>Class:</dt><dd id="cClass"></dd>
+        <dt>QUOTA:</dt><dd id="cQuota"></dd>
+      </dl>
+
+      <h2>Passenger Details:</h2>
+      <ul class="passenger-bars" id="cPassengers"></ul>
+
+      <dl class="summary">
+        <dt>Total Fare :</dt><dd id="cTotal"></dd>
+      </dl>
+    </section>
+
+    <div class="confirm-actions">
+      <a href="booking.html" class="link-back">Edit booking</a>
+      <button type="button" class="pay-btn" id="payBtn">Pay</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
