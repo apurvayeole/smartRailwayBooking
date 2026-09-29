@@ -28,7 +28,7 @@ const CLASSES = {
   'SL': 'Sleeper (SL)'
 };
 
-const QUOTAS = ['General', 'Tatkal', 'Ladies', 'Senior Citizen'];
+const QUOTAS = ['3A', '2A', '1A', 'SL'];
 
 const CONCESSIONS = [
   { name: 'None', off: 0 },
